@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --cor-preta: #0a0a0a;
+    --cor-roxa: #fc2222;
+    --cor-branca: #ffffff;
+    --cor-texto: #979797;
+}  
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: var(--cor-preta)
+    
+}
+
+.frase-container {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  height: 120px;
+  overflow: hidden;
+}
+
+.frase {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6rem;
+  opacity: 0;
+  animation: animarFrases 20s infinite;
+  color: var(--cor-branca)
+}
+
+.frase:nth-child(1) { animation-delay: 0s; }
+.frase:nth-child(2) { animation-delay: 4s; }
+.frase:nth-child(3) { animation-delay: 8s; }
+.frase:nth-child(4) { animation-delay: 12s; }
+.frase:nth-child(5) { animation-delay: 16s; }
+
+@keyframes animarFrases {
+  0% { opacity: 0; transform: translateY(20px); }
+  5% { opacity: 1; transform: translateY(0); }
+  20% { opacity: 1; transform: translateY(0); }
+  25% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 0; }
+}
+/*inicio cabeçalho*/
+header{
+    padding-top: 1%;
+}
+.marginSite{
+    margin: 0 15%;
+}
+.logoM{
+    width: 100px;
+}
+.alinharDivs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.gapDiv{
+    gap: 20%;
+}
+.gapDivHcpc{
+    gap: 10%;
+}
+.removeDeco{
+    text-decoration: none;
+    color: var(--cor-roxa);
+}
+.loginBotao{
+    background-color: var(--cor-roxa);
+    color: var(--cor-branca);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: border 0.5s ease;
+}
+/*fim cabeçalho*/
+
+@media screen and (max-width: 1024px){
+    .marginSite{
+        margin: 0 5%;
+    }
+    .alinharDivs {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .marginSite {
+        margin: 0 5%;
+    }
+    .alinharDivs {
+        flex-direction: column;
+    }
+    .gapDivHcpc{
+        margin: 5% 0;   
+    }
+    .logoM{
+        width:30%;
+    }   
+}
+/*inicio aprensentação*/
+.apresentacao {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.imagem-mestre img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.texto-mestre {
+  flex: 1;
+  color: var(--cor-texto);
+  background-color: var(--cor-preta);
+  padding: 30px;
+  border-left: 5px solid var(--cor-roxa);
+  border-radius: 10px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.texto-mestre h2 {
+  color: var(--cor-roxa);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.texto-mestre p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .apresentacao {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .texto-mestre {
+    border-left: none;
+    border-top: 5px solid #ff0000;
+    padding: 20px;
+  }
+
+  .texto-mestre p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .imagem-mestre img {
+    max-width: 90%;
+  }
+
+  .texto-mestre {
+    padding: 15px;
+  }
+
+  .texto-mestre h2 {
+    font-size: 1.5rem;
+  }
+
+  .texto-mestre p {
+    font-size: 1rem;
+  }
+}
+.tituloPrincipal{
+    margin: 1%;
+    color: var(--cor-branca);
+    text-align: center;
+    font-weight: 50%;
+}
+.textoApres{
+    margin: 1%;
+    color: var(--cor-texto);
+    text-align: center;
+    font-weight: 50%;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+  }
+  
+.aulasBjj{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+  
+.imgCard{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+  
+.cardTitulo{
+    position: absolute;
+    top: 0;
+    color: var(--cor-branca);
+    text-align: center;
+    padding: 10px;
+    font-size: 80%;
+    font-weight: bold;
+  }
+  h2{
+    text-align: center;
+    color: var(--cor-branca);
+    height: 10px;
+  }
+  @media screen and (max-width: 1024px) {
+    .container {
+      flex-direction: row;
+      flex-wrap:nowrap;
+      justify-content: center;
+    }
+  
+    .card {
+      width: 45%;
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    .card {
+      width: 90%;
+      height: 180px;
+    }
+  
+    .card-title {
+      font-size: 16px;
+      padding: 8px;
+    }
+  }
+  
+  h2 {
+    color: var(--cor-roxa);
+    margin: 40px 0 20px;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  .item {
+    background-color: var(--cor-preta);
+    color: var(--cor-roxa);
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    transition: transform 0.3s;
+  }
+  
+  .item:hover {
+    transform: scale(1.02);
+  }
+  .produtosBjj {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  button {
+    background-color: var(--cor-roxa);
+    color: var(--cor-branca);
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .price{
+    color: var(--cor-branca);
+  }
+  
+  button:hover {
+    background-color: var(--cor-roxa);
+  }
+  @media screen and (max-width: 1024px) {
+    .container {
+      gap: 16px;
+      padding: 20px 10px;
+    }
+  
+    .item {
+      width: 45%;
+    }
+  }
+  @media screen and (max-width: 780px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .item {
+      width: 90%;
+    }
+  }
+  .rodape {
+    background-color: var(--cor-preta);
+    color: var(--cor-roxa);
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.95rem;
+    border-top: 1px solid #333;
+    margin-top: 40px;
+  }
+  
+  .rodape-conteudo {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .rodape-conteudo p {
+    margin: 6px 0;
+
+  }
